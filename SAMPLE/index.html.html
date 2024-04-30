@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do you love me?</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-image: url('LOVE.jpg'); /* Replace 'background_image.jpg' with your image file */
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .love-message {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 10px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    #no-btn {
+        background-color: red;
+    }
+    #yes-btn {
+        background-color: green;
+    }
+</style>
+</head>
+<body>
+
+<div>
+    <div class="love-message">Do you love me? ❤️</div>
+    <button class="btn" id="yes-btn">Yes</button>
+    <button class="btn" id="no-btn">No</button>
+</div>
+
+<script>
+    document.getElementById('yes-btn').addEventListener('click', function() {
+        alert("I love you too meri jaan mera babu 😍💕😘😂😂");
+    });
+    document.getElementById('no-btn').addEventListener('click', function() {
+        var button = document.getElementById('no-btn');
+        var maxX = window.innerWidth - button.offsetWidth;
+        var maxY = window.innerHeight - button.offsetHeight;
+        var newX = Math.floor(Math.random() * maxX);
+        var newY = Math.floor(Math.random() * maxY);
+        button.style.position = "absolute";
+        button.style.left = newX + "px";
+        button.style.top = newY + "px";
+    });
+</script>
+
+</body>
+</html>
